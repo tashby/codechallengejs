@@ -1,0 +1,25 @@
+html {
+  background-color: lightgrey;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#user2table {
+  border: 2px solid black;
+  list-style: none;
+}
+
+#user1table {
+  border: 2px solid black;
+  list-style: none;
+  overflow: scroll;
+}
+
+li {
+  border: 1px solid black;
+}
