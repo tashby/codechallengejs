@@ -19,9 +19,10 @@ $.ajax({
     var user1tablecontent = '';
     for (var i = 0; i < data.length; i++)
     {
-      user1tablecontent += '<li id= user1'+data[i].id+' draggable="true" ondragstart="drag(event)">' + data[i].id + ' | ' + data[i].title + '</li>';
+      user1tablecontent += '<li id='+data[i].userId+data[i].id+' draggable="true" ondragstart="drag(event)">' + data[i].id + ' | ' + data[i].title + '</li>';
     }
     $("#user1table").append(user1tablecontent);
+    $('#user1table li:nth-child(odd)').addClass('alternate')
   },
 });
 
@@ -33,9 +34,10 @@ $.ajax({
         var user2tablecontent = '';
         for (var i = 0; i < data.length; i++)
         {
-          user2tablecontent += '<li id= user2'+data[i].id+' draggable="true" ondragstart="drag(event)">' + data[i].id + ' | ' + data[i].title + '</li>';
+          user2tablecontent += '<li id='+data[i].userId+data[i].id+' draggable="true" ondragstart="drag(event)">' + data[i].id + ' | ' + data[i].title + '</li>';
         }
         $("#user2table").append(user2tablecontent);
+        $('#user2table li:nth-child(odd)').addClass('alternate');
       },
     });
 
@@ -56,7 +58,7 @@ $.ajax({
        $.ajax({
          url: root + '/albums',
          method: 'POST',
-         data: { 'id' : 'id' } ,
+         data: { 'userId' : 'userId' } ,
          success: function (data) {
            console.log("success! UserId updated");
          },
