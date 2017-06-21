@@ -1,5 +1,4 @@
 
-
     var root = 'https://jsonplaceholder.typicode.com';
 
 
@@ -53,4 +52,14 @@ $.ajax({
        ev.preventDefault();
        var data = ev.dataTransfer.getData("text");
        ev.target.appendChild(document.getElementById(data));
+
+       $.ajax({
+         url: root + '/albums',
+         method: 'POST',
+         data: { 'id' : 'id' } ,
+         success: function (data) {
+           console.log("success! UserId updated");
+         },
+       });
+
    }
