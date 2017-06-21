@@ -1,0 +1,18 @@
+#user2table {
+  border: 1px solid black;
+  float: right;
+  width: 50%;
+  list-style: none;
+}
+
+#user1table {
+  border: 1px solid black;
+  width: 40%;
+  float: left;
+  list-style: none;
+}
+
+
+li {
+  border: 1px solid black;
+}
